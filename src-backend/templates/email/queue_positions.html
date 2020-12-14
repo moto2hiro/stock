@@ -1,0 +1,12 @@
+<h2>Queue Positions Complete</h1>
+
+<p>Errors:</p>
+<ul>
+  {%if model['errors']|length == 0 %}
+    <li>No errors.</li>
+  {% else %}
+    {% for error in model['errors'] %}
+      <li>{{ error }}</li>
+    {% endfor %}
+  {% endif %}
+</ul>

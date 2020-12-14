@@ -1,0 +1,18 @@
+<h2>Import Prices Complete</h1>
+
+<p>Results:</p>
+<ul>
+  <li>New stock_prices count = {{ model['stock_prices']|length }}</li>
+  <li>New etf_prices count = {{ model['etf_prices']|length }}</li>
+  <li>New missing_symbols count = {{ model['missing_symbols']|length }}</li>
+</ul>
+<p>Errors:</p>
+<ul>
+  {%if model['errors']|length == 0 %}
+    <li>No errors.</li>
+  {% else %}
+    {% for error in model['errors'] %}
+      <li>{{ error }}</li>
+    {% endfor %}
+  {% endif %}
+</ul>
